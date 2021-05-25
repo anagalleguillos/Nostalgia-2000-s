@@ -49,17 +49,7 @@
 
 	//Función Música Random popup
 	function popup(mylink, windowname){ 
-		if (! window.focus)return true;
-		var href;
 		var music = [ 
-			"https://www.youtube.com/watch?v=F5-oCyBQW8k",
-            "https://www.youtube.com/watch?v=udBLU0Y_G2s",
-            "https://www.youtube.com/watch?v=eap0G9ldKc0",
-            "https://www.youtube.com/watch?v=qExd-3oCTl4",
-            "https://www.youtube.com/watch?v=5be0CVp-s7I",
-            "https://www.youtube.com/watch?v=P9YFVxaejxI",
-            "https://www.youtube.com/watch?v=pj2ntDiXJCk",
-            "https://www.youtube.com/watch?v=ZyhrYis509A",
 			"https://www.youtube.com/watch?v=c18441Eh_WE",
 			"https://www.youtube.com/watch?v=5NPBIwQyPWE&ab_channel=AvrilLavigneAvrilLavigneCanaloficialdeartista",
 			"https://www.youtube.com/watch?v=C-u5WLJ9Yk4&ab_channel=BritneySpearsBritneySpearsCanaloficialdeartista",
@@ -72,14 +62,18 @@
 			"https://www.youtube.com/watch?v=TGwZ7MNtBFU&ab_channel=GwenStefaniGwenStefaniCanaloficialdeartista",
 			"https://www.youtube.com/watch?v=9rlNpWYQunY&ab_channel=GwenStefaniGwenStefaniCanaloficialdeartista",
 			"https://www.youtube.com/watch?v=gGdGFtwCNBE&ab_channel=TheKillersMusicTheKillersMusicCanaloficialdeartista",
+			"https://www.youtube.com/watch?v=F5-oCyBQW8k",
+            "https://www.youtube.com/watch?v=udBLU0Y_G2s",
+            "https://www.youtube.com/watch?v=eap0G9ldKc0",
+            "https://www.youtube.com/watch?v=qExd-3oCTl4",
+            "https://www.youtube.com/watch?v=5be0CVp-s7I",
+            "https://www.youtube.com/watch?v=P9YFVxaejxI",
+            "https://www.youtube.com/watch?v=pj2ntDiXJCk",
+            "https://www.youtube.com/watch?v=ZyhrYis509A",
 		];
-		var cancion = Math.floor(Math.random()* 20 + 1);
+		var cancion = Math.random() * music.length;
 		cancion = parseInt(cancion, 20);
-
-		if (typeof(cancion) == 'string') href=mylink;
-		else href=cancion.href;
 		window.open(music[cancion], windowname, 'width=500,height=280,scrollbars=yes'); 
-		return false;
 }
 </script>
 <!-- fin JAVASCRIPT-->
