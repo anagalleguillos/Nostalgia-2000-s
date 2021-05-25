@@ -1,0 +1,42 @@
+body{
+	background: #94C9FF;
+	font-family: Montserrat;
+	text-align: center;
+	justify-content: center;
+}
+
+h1 {
+	font-weight: 600;
+	font-size: 48px;
+	color: #ffffff;
+	-webkit-text-stroke:1px #27272D;
+	margin-top: 5%;
+	align-content: center;
+
+}
+
+svg {
+	margin-top: 5%;
+	width: 800px;
+	height: 220px;
+	max-width: 90%;
+	}
+
+
+#play-hover{
+  opacity: 0;
+}
+#play-hover:hover{
+	border-image: url(play-hover.png) 30 round
+	stroke: 20px black;
+	cursor: pointer;
+	opacity: 0.25;
+}
+#play-hover:active{
+  opacity: 1;
+  transition-duration: 0.5s;
+  outline: 2px black;
+  mix-blend-mode: multiply;
+}
+
+

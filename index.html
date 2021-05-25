@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<!-- caracteres en espaÃ±ol -->
+<meta charset="utf-8">
+
+
+<head>
+	<title>Nostalgia 20000's</title>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+
+<body>
+<h1>Nostalgia 2000´s</h1>
+	
+
+	<!-- Llamando a la funciÃ³n de youtube random-->
+
+		<!-- IMAGEN DEL MP3 SVG-->
+		<?xml version="1.0" encoding="utf-8"?>
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			viewBox="0 0 451.2 160.4" style="enable-background:new 0 0 451.2 160.4;" xml:space="preserve">
+			<!--imagen mp3 -->
+			<image width="1417" height="504" id="mp3" xlink:href="img/mp3.png"  transform="matrix(0.3184 0 0 0.3184 1.094470e-02 -3.078449e-02)">
+			</image>
+            
+            <!--Gif-->
+            <image style="overflow:visible;enable-background:new"  x="0px" y="-15px" xlink:href="img/frase.gif" width="300" height="96" transform="matrix(0.43 0 0 0.43 171.2697 64.0)">
+            </image>
+
+			<a rel="noopener noreferrer" onclick="return popup(this, 'notes')">
+				<!--imagen play-hover-->
+			<image width="300" height="300" id="play-hover" xlink:href="img/play-hover.png"  transform="matrix(0.1303 0 0 0.1303 74.6511 61.8378)" >
+			</image> </a>
+		</svg>
+
+		<!-- Link a sonido de click de botón mp3-->
+		<audio id="mySong">
+		<source src="multimedia/audio1.mp3" type="audio/mp3">
+		</audio>
+
+	
+
+<!-- inicio JAVASCRIPT-->
+<script type="text/javascript">
+	//Función sonido clicl botón mp3
+	var mySong = document.getElementById('mySong');
+	var icon = document.getElementById('play-hover');
+	icon.onclick = function(){mySong.play ();}
+
+	//Función Música Random popup
+	function popup(mylink, windowname){ 
+		if (! window.focus)return true;
+		var href;
+		var music = [ 
+			"https://www.youtube.com/watch?v=F5-oCyBQW8k",
+            "https://www.youtube.com/watch?v=udBLU0Y_G2s",
+            "https://www.youtube.com/watch?v=eap0G9ldKc0",
+            "https://www.youtube.com/watch?v=qExd-3oCTl4",
+            "https://www.youtube.com/watch?v=5be0CVp-s7I",
+            "https://www.youtube.com/watch?v=P9YFVxaejxI",
+            "https://www.youtube.com/watch?v=pj2ntDiXJCk",
+            "https://www.youtube.com/watch?v=ZyhrYis509A",
+			"https://www.youtube.com/watch?v=c18441Eh_WE",
+			"https://www.youtube.com/watch?v=5NPBIwQyPWE&ab_channel=AvrilLavigneAvrilLavigneCanaloficialdeartista",
+			"https://www.youtube.com/watch?v=C-u5WLJ9Yk4&ab_channel=BritneySpearsBritneySpearsCanaloficialdeartista",
+			"https://www.youtube.com/watch?v=LOZuxwVk7TU&t=18s&ab_channel=BritneySpearsBritneySpearsCanaloficialdeartista",
+			"https://www.youtube.com/watch?v=tolm-07if3c&ab_channel=TheTingTingsTheTingTingsCanaloficialdeartista",
+			"https://www.youtube.com/watch?v=tuK6n2Lkza0&ab_channel=TheTingTingsTheTingTingsCanaloficialdeartista",
+			"https://www.youtube.com/watch?v=pT68FS3YbQ4&ab_channel=JetJetCanaloficialdeartista",
+			"https://www.youtube.com/watch?v=erG5rgNYSdk&ab_channel=weezerweezerCanaloficialdeartista",
+			"https://www.youtube.com/watch?v=8xg3vE8Ie_E&ab_channel=TaylorSwiftTaylorSwiftCanaloficialdeartista",
+			"https://www.youtube.com/watch?v=TGwZ7MNtBFU&ab_channel=GwenStefaniGwenStefaniCanaloficialdeartista",
+			"https://www.youtube.com/watch?v=9rlNpWYQunY&ab_channel=GwenStefaniGwenStefaniCanaloficialdeartista",
+			"https://www.youtube.com/watch?v=gGdGFtwCNBE&ab_channel=TheKillersMusicTheKillersMusicCanaloficialdeartista",
+		];
+		var cancion = Math.floor(Math.random()* 20 + 1);
+		cancion = parseInt(cancion, 20);
+
+		if (typeof(cancion) == 'string') href=mylink;
+		else href=cancion.href;
+		window.open(music[cancion], windowname, 'width=500,height=280,scrollbars=yes'); 
+		return false;
+}
+</script>
+<!-- fin JAVASCRIPT-->
+
+
+
+	
+</body>
+</html>
